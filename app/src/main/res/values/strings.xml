@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">RxTest</string>
     <string name="fundamental">Fundamental</string>
+    <string name="operator">Operator</string>
+    <string name="scheduler">Scheduler</string>
+    <string name="rxbinding">RxBinding</string>
 </resources>

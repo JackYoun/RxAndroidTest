@@ -1,4 +1,4 @@
-package com.jack.app.rxtest;
+package com.jack.app.rxtest.rxbinding;
 
 import android.app.Activity;
 import android.content.Intent;

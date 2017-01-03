@@ -18,6 +18,15 @@
         <activity
             android:name=".fundamental.FundamentalActivity"
             android:label="@string/fundamental"/>
+        <activity
+            android:name=".operator.OperatorActivity"
+            android:label="@string/operator"/>
+        <activity
+            android:name=".scheduler.SchedulerActivity"
+            android:label="@string/scheduler"/>
+        <activity
+            android:name=".rxbinding.RxBindingActivity"
+            android:label="@string/rxbinding"/>
     </application>
 
 </manifest>

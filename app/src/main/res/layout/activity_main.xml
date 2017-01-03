@@ -17,26 +17,26 @@
         android:id="@+id/btn_fundamental"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="fundamental"/>
+        android:text="@string/fundamental"/>
 
     <Button
         android:id="@+id/btn_operator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="operator"/>
+        android:text="@string/operator"/>
 
     <Button
         android:id="@+id/btn_job_scheduler"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="job scheduler"/>
+        android:text="@string/scheduler"/>
 
     <Button
         android:id="@+id/btn_rx_binding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="rx binding"/>
+        android:text="@string/rxbinding"/>
 </LinearLayout>
