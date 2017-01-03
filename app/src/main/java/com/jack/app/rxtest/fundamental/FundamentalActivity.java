@@ -190,7 +190,9 @@ public class FundamentalActivity extends AppCompatActivity {
      */
     private void testWithJava8() {
         Observable.just("Hello rx, hello java8")
-                .map(str -> str.length()) // same as (str) -> {return str.length();}
+                .map(str -> str.length()) // same as (String str) -> {return str.length();}
+                // same as (str) -> {return str.length();}
+                // same as str -> {return str.length();}
                 .subscribe(length -> mLogger.d("simpleTestWithJava8", "length: " + length));
     }
 }
