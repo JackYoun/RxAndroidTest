@@ -4,4 +4,6 @@
     <string name="operator">Operator</string>
     <string name="scheduler">Scheduler</string>
     <string name="rxbinding">RxBinding</string>
+    <string name="single">Single</string>
+    <string name="subject">Subject</string>
 </resources>

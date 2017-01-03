@@ -27,6 +27,12 @@
         <activity
             android:name=".rxbinding.RxBindingActivity"
             android:label="@string/rxbinding"/>
+        <activity
+            android:name=".single.SingleActivity"
+            android:label="@string/single"/>
+        <activity
+            android:name=".subject.SubjectActivity"
+            android:label="@string/subject"/>
     </application>
 
 </manifest>

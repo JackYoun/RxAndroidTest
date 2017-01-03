@@ -8,6 +8,8 @@ import com.jack.app.rxtest.fundamental.FundamentalActivity;
 import com.jack.app.rxtest.operator.OperatorActivity;
 import com.jack.app.rxtest.rxbinding.RxBindingActivity;
 import com.jack.app.rxtest.scheduler.SchedulerActivity;
+import com.jack.app.rxtest.single.SingleActivity;
+import com.jack.app.rxtest.subject.SubjectActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "MainActivity";
@@ -19,7 +21,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.btn_fundamental).setOnClickListener(this);
         findViewById(R.id.btn_operator).setOnClickListener(this);
-        findViewById(R.id.btn_job_scheduler).setOnClickListener(this);
+        findViewById(R.id.btn_single).setOnClickListener(this);
+        findViewById(R.id.btn_subject).setOnClickListener(this);
+        findViewById(R.id.btn_scheduler).setOnClickListener(this);
         findViewById(R.id.btn_rx_binding).setOnClickListener(this);
     }
 
@@ -34,7 +38,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 OperatorActivity.invoke(this);
                 break;
 
-            case R.id.btn_job_scheduler:
+            case R.id.btn_single:
+                SingleActivity.invoke(this);
+                break;
+
+            case R.id.btn_subject:
+                SubjectActivity.invoke(this);
+                break;
+
+            case R.id.btn_scheduler:
                 SchedulerActivity.invoke(this);
                 break;
 

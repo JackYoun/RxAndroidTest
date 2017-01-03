@@ -27,7 +27,21 @@
         android:text="@string/operator"/>
 
     <Button
-        android:id="@+id/btn_job_scheduler"
+        android:id="@+id/btn_single"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/single"/>
+
+    <Button
+        android:id="@+id/btn_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/subject"/>
+
+    <Button
+        android:id="@+id/btn_scheduler"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
