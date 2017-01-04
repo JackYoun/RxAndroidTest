@@ -14,10 +14,10 @@
     android:gravity="center">
 
     <Button
-        android:id="@+id/btn_fundamental"
+        android:id="@+id/btn_observable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/fundamental"/>
+        android:text="@string/observable"/>
 
     <Button
         android:id="@+id/btn_operator"

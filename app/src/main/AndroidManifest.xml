@@ -16,8 +16,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".fundamental.FundamentalActivity"
-            android:label="@string/fundamental"/>
+            android:name=".observable.ObservableActivity"
+            android:label="@string/observable"/>
         <activity
             android:name=".operator.OperatorActivity"
             android:label="@string/operator"/>

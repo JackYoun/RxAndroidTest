@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.jack.app.rxtest.fundamental.FundamentalActivity;
+import com.jack.app.rxtest.observable.ObservableActivity;
 import com.jack.app.rxtest.operator.OperatorActivity;
 import com.jack.app.rxtest.rxbinding.RxBindingActivity;
 import com.jack.app.rxtest.scheduler.SchedulerActivity;
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.btn_fundamental).setOnClickListener(this);
+        findViewById(R.id.btn_observable).setOnClickListener(this);
         findViewById(R.id.btn_operator).setOnClickListener(this);
         findViewById(R.id.btn_single).setOnClickListener(this);
         findViewById(R.id.btn_subject).setOnClickListener(this);
@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btn_fundamental:
-                FundamentalActivity.invoke(this);
+            case R.id.btn_observable:
+                ObservableActivity.invoke(this);
                 break;
 
             case R.id.btn_operator:

@@ -1,4 +1,4 @@
-package com.jack.app.rxtest.fundamental;
+package com.jack.app.rxtest.observable;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -21,10 +21,10 @@ import rx.functions.Func1;
  * Created by Jack on 2017-01-03.
  */
 
-public class FundamentalActivity extends AppCompatActivity {
+public class ObservableActivity extends AppCompatActivity {
 
     public static void invoke(Activity activity) {
-        Intent intent = new Intent(activity, FundamentalActivity.class);
+        Intent intent = new Intent(activity, ObservableActivity.class);
         activity.startActivity(intent);
     }
 
@@ -34,44 +34,44 @@ public class FundamentalActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_fundamental);
+        setContentView(R.layout.activity_observable);
 
-        findViewById(R.id.btn_activity_fundamental_1).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_activity_observable_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 test1();
             }
         });
 
-        findViewById(R.id.btn_activity_fundamental_2).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_activity_observable_2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 test2();
             }
         });
 
-        findViewById(R.id.btn_activity_fundamental_3).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_activity_observable_3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 test3();
             }
         });
 
-        findViewById(R.id.btn_activity_fundamental_4).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_activity_observable_4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 test4();
             }
         });
 
-        findViewById(R.id.btn_activity_fundamental_5).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_activity_observable_5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 testWithJava8();
             }
         });
 
-        mLogger = new TextViewLogger((TextView) findViewById(R.id.tv_activity_fundamental_log), true);
+        mLogger = new TextViewLogger((TextView) findViewById(R.id.tv_activity_observable_log), true);
     }
 
     /**
