@@ -36,35 +36,35 @@ public class FundamentalActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_fundamental);
 
-        findViewById(R.id.btn_activity_fundamental1).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_activity_fundamental_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                simpleTest();
+                test1();
             }
         });
 
-        findViewById(R.id.btn_activity_fundamental2).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_activity_fundamental_2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                simpleTest2();
+                test2();
             }
         });
 
-        findViewById(R.id.btn_activity_fundamental3).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_activity_fundamental_3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                simpleTest3();
+                test3();
             }
         });
 
-        findViewById(R.id.btn_activity_fundamental4).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_activity_fundamental_4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                simpleTest4();
+                test4();
             }
         });
 
-        findViewById(R.id.btn_activity_fundamental5).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_activity_fundamental_5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 testWithJava8();
@@ -79,7 +79,7 @@ public class FundamentalActivity extends AppCompatActivity {
      * Subscriber의 onNext는 데이터가 발행될 때 마다 호출이 되고 데이터 발행이 끝이나면 onCompleted가 호출되고 발행중 에러가 발생하면 onError가 호출된다.
      * onCompleted와 onError는 둘중 하나만 호출된다.
      */
-    private void simpleTest() {
+    private void test1() {
         Observable<String> observable = Observable.create(new Observable.OnSubscribe<String>() {
             @Override
             public void call(Subscriber<? super String> subscriber) {
@@ -90,17 +90,17 @@ public class FundamentalActivity extends AppCompatActivity {
         observable.subscribe(new Subscriber<String>() {
             @Override
             public void onCompleted() {
-                mLogger.d("simpleTest", "onCompleted");
+                mLogger.d("test1", "onCompleted");
             }
 
             @Override
             public void onError(Throwable e) {
-                mLogger.d("simpleTest", "onError: " + e.getMessage());
+                mLogger.d("test1", "onError: " + e.getMessage());
             }
 
             @Override
             public void onNext(String s) {
-                mLogger.d("simpleTest", "onNext: " + s);
+                mLogger.d("test1", "onNext: " + s);
             }
         });
     }
@@ -108,7 +108,7 @@ public class FundamentalActivity extends AppCompatActivity {
     /**
      * Subscriber의 필요한 메서드만 Action interface로 구현할 수 있다.
      */
-    private void simpleTest2() {
+    private void test2() {
         Observable<String> observable = Observable.create(new Observable.OnSubscribe<String>() {
             @Override
             public void call(Subscriber<? super String> subscriber) {
@@ -119,17 +119,17 @@ public class FundamentalActivity extends AppCompatActivity {
         observable.subscribe(new Action1<String>() {
             @Override
             public void call(String s) { // onNext
-                mLogger.d("simpleTest2", "action string: " + s);
+                mLogger.d("test2", "action string: " + s);
             }
         }, new Action1<Throwable>() {
             @Override
             public void call(Throwable throwable) { // onError
-                mLogger.d("simpleTest2", "action throwable: " + throwable.getMessage());
+                mLogger.d("test2", "action throwable: " + throwable.getMessage());
             }
         }, new Action0() {
             @Override
             public void call() { // onCompleted
-                mLogger.d("simpleTest2", "action 0");
+                mLogger.d("test2", "action 0");
             }
         });
     }
@@ -139,7 +139,7 @@ public class FundamentalActivity extends AppCompatActivity {
      * map: Observable이 발행한 항목에 함수를 적용한다. (변환 operator)
      * filter: 테스트 조건을 만족하는 항목들만 배출한다. (필터링 operator)
      */
-    private void simpleTest3() {
+    private void test3() {
         Observable.just("Hello map!")
                 .map(new Func1<String, Integer>() {
                     @Override
@@ -156,7 +156,7 @@ public class FundamentalActivity extends AppCompatActivity {
                 .subscribe(new Action1<Integer>() {
                     @Override
                     public void call(Integer length) {
-                        mLogger.d("simpleTest3", "length: " + length);
+                        mLogger.d("test3", "length: " + length);
                     }
                 });
     }
@@ -164,7 +164,7 @@ public class FundamentalActivity extends AppCompatActivity {
     /**
      * merge: 복수개의 Observable들이 배출하는 항목들을 merge시켜 하나의 Observable로 만든다. (결합 operator)
      */
-    private void simpleTest4() {
+    private void test4() {
         Observable observable1 = Observable.just("What is weather like to day?");
         Observable observable2 = Observable.just("It is raining and cold.");
 
@@ -172,7 +172,7 @@ public class FundamentalActivity extends AppCompatActivity {
                 .subscribe(new Action1<String>() {
                     @Override
                     public void call(String str) {
-                        mLogger.d("simpleTest4", str);
+                        mLogger.d("test4", str);
                     }
                 });
 
@@ -180,7 +180,7 @@ public class FundamentalActivity extends AppCompatActivity {
                 .subscribe(new Action1<String>() {
                     @Override
                     public void call(String str) {
-                        mLogger.d("simpleTest4", "(reversed) " + str);
+                        mLogger.d("test4", "(reversed) " + str);
                     }
                 });
     }
@@ -193,6 +193,6 @@ public class FundamentalActivity extends AppCompatActivity {
                 .map(str -> str.length()) // same as (String str) -> {return str.length();}
                 // same as (str) -> {return str.length();}
                 // same as str -> {return str.length();}
-                .subscribe(length -> mLogger.d("simpleTestWithJava8", "length: " + length));
+                .subscribe(length -> mLogger.d("testWithJava8", "length: " + length));
     }
 }

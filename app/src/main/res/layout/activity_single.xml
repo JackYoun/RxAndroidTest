@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.jack.app.rxtest.fundamental.FundamentalActivity"
+    tools:context="com.jack.app.rxtest.single.SingleActivity"
     android:orientation="horizontal">
 
     <LinearLayout
@@ -19,42 +19,28 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btn_activity_fundamental_1"
+            android:id="@+id/btn_activity_single_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="test 1"/>
 
         <Button
-            android:id="@+id/btn_activity_fundamental_2"
+            android:id="@+id/btn_activity_single_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="test 2"/>
 
         <Button
-            android:id="@+id/btn_activity_fundamental_3"
+            android:id="@+id/btn_activity_single_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="test 3"/>
-
-        <Button
-            android:id="@+id/btn_activity_fundamental_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="test 4"/>
-
-        <Button
-            android:id="@+id/btn_activity_fundamental_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="with java8"/>
     </LinearLayout>
 
     <TextView
-        android:id="@+id/tv_activity_fundamental_log"
+        android:id="@+id/tv_activity_single_log"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1.5"/>
