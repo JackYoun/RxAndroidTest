@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.jack.app.rxtest.subject.SubjectActivity"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_activity_subject_async_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="async subject 1"/>
+
+        <Button
+            android:id="@+id/btn_activity_subject_async_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="async subject 2"/>
+
+        <Button
+            android:id="@+id/btn_activity_subject_async_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="async subject 3"/>
+
+        <Button
+            android:id="@+id/btn_activity_subject_behavior_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="behavior subject 1"/>
+
+        <Button
+            android:id="@+id/btn_activity_subject_behavior_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="behavior subject 2"/>
+
+        <Button
+            android:id="@+id/btn_activity_subject_publish_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="publish subject 1"/>
+
+        <Button
+            android:id="@+id/btn_activity_subject_publish_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="publish subject 2"/>
+
+        <Button
+            android:id="@+id/btn_activity_subject_replay_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="replay subject 1"/>
+
+        <Button
+            android:id="@+id/btn_activity_subject_replay_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="replay subject 2"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_activity_subject_log"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"/>
+</LinearLayout>

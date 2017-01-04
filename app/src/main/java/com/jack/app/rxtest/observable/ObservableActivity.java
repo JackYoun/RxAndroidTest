@@ -162,7 +162,7 @@ public class ObservableActivity extends AppCompatActivity {
     }
 
     /**
-     * merge: 복수개의 Observable들이 배출하는 항목들을 merge시켜 하나의 Observable로 만든다. (결합 operator)
+     * merge: 복수개의 Observable들이 발행하는 항목들을 merge시켜 하나의 Observable로 만든다. (결합 operator)
      */
     private void test4() {
         Observable observable1 = Observable.just("What is weather like to day?");
